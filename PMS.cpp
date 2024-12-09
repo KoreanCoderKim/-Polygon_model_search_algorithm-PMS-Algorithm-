@@ -27,7 +27,7 @@ int main()
 		}
 		cin >> E;
 		Logical[S].push_back(E);
-					Logical[E].push_back(S);
+		Logical[E].push_back(S);
 		LAA = S;
 	}
 
