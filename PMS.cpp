@@ -39,7 +39,7 @@ int main()
 		if (indegree == 2) {
 			visited.push_back(now);
 			answer += 1;
-		 sort(visited.begin(),visited.end());
+		  sort(visited.begin(),visited.end());
 			for (int i : Logical[now]) {
 				if (!binarysearch(i, 0, visited.size()-1)) {
 					now = i;
