@@ -35,9 +35,10 @@ int main()
 
 	while (now <= LAA) {
 		int indegree = Logical[now].size();
-		if (indegree >= 2) {
+		if (indegree == 2) {
 			visited.push_back(now);
 			answer += 1;
+   sort(visited.begin(),visited.end());
 			for (int i : Logical[now]) {
 				if (!binarysearch(i, 0, visited.size()-1)) {
 					now = i;
@@ -60,7 +61,6 @@ int main()
 }
 
 bool binarysearch(int find, int s, int e) {
-	sort(visited.begin(), visited.end());
 	while (s <= e) {
 		int midi = (s + e) / 2;
 		int midv = visited[midi];
